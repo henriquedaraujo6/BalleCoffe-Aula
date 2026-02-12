@@ -1,0 +1,164 @@
+/* Importação das Fonts Google Fonts) 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Inter:wght@600&family=Montserrat:wght@800&family=Teko:wght@600&display=swap');
+
+/* Estilos gerais (Todo projeto) */
+
+* {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box; /* Define o modelo de caixa para incluir padding e borda no tamanho total do elemento */
+ 
+ 
+ 
+}
+
+    body {
+    background-color: #1f1517;
+    color: #FFF;
+ } 
+
+
+ html {
+
+    font-family: Inter;
+    font-weight: 500;
+ }
+
+a {
+    text-decoration: none; /* Remove a decoração do texto, com o sublinhado do elemento */
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores de lista (bolinhas) de um elemento lista*/
+}
+
+/* ___________________________________________________________________________________________ */
+/* Seção principal (Main) */
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background: #181012;
+    transform: translateX(100%);
+    opacity: 0;
+    /* Adiciona a transição para suavizar a animação */
+    transition: transform 1s ease, opacity 1 ease;
+}
+
+.container.slide-from-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.info {
+    max-width: 1120px; /* Define a largura máxima do elemento como 1120px */
+    height: 60vh; /* define a altura do elemento como 60% da altura da janela */
+    display: flex; /* Define como um elemento um container flexivel */
+    flex-direction: row; /* Estabelece a direção dos elementos */
+    justify-content: space-between; /* Distribui os elementos filho uniformemente ao longo do eixo principal */
+    gap: 6rem; /* Define o espaçamento entre os elementos filho como 6 vezes o tamanho da unidade rem */
+    align-items: center; /* Alinha os elementos filhos verticalmente no centro */
+    padding: 0rem, 2rem; /* Define o preenchimento (padding) de 0 na direção */
+    margin: auto; /* Centraliza o elemento horizontalmente */
+    overflow: clip; /* Apara o conteúdo que ultrapassa o container */
+
+}
+
+   /* Destaque */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news {
+    font-family: 'Epilogue' , 'sans-serif';
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.marrom {
+    color: #a45a49;
+}
+
+h1 {
+    font-family: 'Montserrat' , 'sans-serif';
+    font-size: 56px;
+    font-weight: 800;
+    color: #FFF;
+}
+
+hr {
+    border-color: #a45a49;
+}
+
+.subtitle {
+    color: #c7bab3; 
+   font-family: 'Inter' , 'sans-serif';
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.imagens {
+    max-width: 45%;
+    column-count: 4;
+    column-gap: 1rem;
+    margin: -1rem;
+}
+
+.imagens > figure > img {
+    width: 100px;
+    border-radius: 0.5rem;
+}
+.button {
+    width:100%;
+    max-width: 1120px;
+    padding: 1rem;
+    margin: auto;
+    transform: translateY(-50); /* Move o elemento 50% do seu próprio tamanho para cima ao longo do eixo Y */
+}
+
+button {
+    border: none;
+    padding: 1 rem;
+    border-radius: 0.5rem;
+    background: #a45a49;
+    transition: background-color 0.3s ease;
+    
+}
+
+button:hover{
+    background: #783f37;
+
+}
+
+/* Responsividade telas menores que 768px */
+@media screen and (max-width: 768px) {
+    /* Galeria de fotos */
+    .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .imagens {
+        column-count: 1;
+        column-gap: 0.5rem;
+    }
+
+    .receitas {
+        padding-top: 0px;
+    }
+
+    .button {
+        padding-bottom: 0px;
+    }
+}
+
+
+    
